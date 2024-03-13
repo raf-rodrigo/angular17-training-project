@@ -18,11 +18,15 @@ export class ListService {
 
   private http = inject(HttpClient);
 
-  remove(animals: Animal[], animal: Animal){
-    return animals.filter((a) => animal.name !== a.name);
+  remove(id: number){
+    return this.http.delete<Animal>(`${BASE_URL}/${id}`);
   }
 
   getAll(): Observable<Animal[]>{
     return this.http.get<Animal[]>(BASE_URL);
+  }
+
+  getItem(id: number): Observable<Animal>{
+    return this.http.get<Animal>(`${BASE_URL}/${id}`)
   }
 }

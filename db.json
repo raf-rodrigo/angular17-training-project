@@ -1,10 +1,28 @@
 {
   "animals": [
-    {"id": 1, "name": "Turca", "type":"Dog", "age": 8},
-    {"id": 2, "name": "Tom", "type":"Cat", "age": 2},
-    {"id": 3, "name": "Thunder", "type":"Dog", "age": 9},
-    {"id": 4, "name": "Wally", "type":"Cat", "age": 5},
-    {"id": 5, "name": "Bob", "type":"Hourse", "age": 4},
-    {"id": 6, "name": "Winky", "type":"Cat", "age": 4}
+    {
+      "id": "2",
+      "name": "Tom",
+      "type": "Cat",
+      "age": 2
+    },
+    {
+      "id": "3",
+      "name": "Thunder",
+      "type": "Dog",
+      "age": 9
+    },
+    {
+      "id": "4",
+      "name": "Wally",
+      "type": "Cat",
+      "age": 5
+    },
+    {
+      "id": "5",
+      "name": "Bob",
+      "type": "Hourse",
+      "age": 4
+    }
   ]
 }

@@ -5,11 +5,12 @@ import { Component, OnInit, inject } from '@angular/core';
 
 import { ListService } from '../../services/list.service';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-list-render',
   standalone: true,
-  imports: [NgFor, HttpClientModule],
+  imports: [NgFor, HttpClientModule, RouterLink],
   templateUrl: './list-render.component.html',
   styleUrl: './list-render.component.css'
 })
@@ -33,7 +34,8 @@ export class ListRenderComponent implements OnInit{
   }
 
   removeAnimal(animal: Animal){
-    this.animals = this.listService.remove(this.animals, animal);
+    this.animals = this.animals.filter((a) => animal.name !== a.name);
+    this.listService.remove(animal.id).subscribe();
   }
 
   getAnimals(): void{
