@@ -1,0 +1,18 @@
+.small_title{
+  font-size: 40px;
+  color: yellow;
+  background-color: blue;
+}
+
+.green_title {
+  background-color: green;
+  font-size: 3em;
+  padding: 2em;
+  margin: .5em
+}
+
+.underline {
+  background-color: violet;
+  color: #000;
+  text-decoration: underline;
+}
